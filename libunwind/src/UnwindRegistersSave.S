@@ -421,6 +421,7 @@ LnoR2Fix:
 #define PPC64_STVS(n)      \
   xxswapd n, n            ;\
   stxvd2x n, 0, 4         ;\
+  xxswapd n, n            ;\
   addi    4, 4, 16
 #else
 #define PPC64_STVS(n)      \
